@@ -1,0 +1,18 @@
+@use code
+@use math
+@use language
+@use list
+
+# 1-based indexing starts at .num(1)
+students = list.sentence("Aarav", "Riya", "Kabir")
+first_student = students.num(1)
+
+func make_greeting.is.(person_name, bonus_points)
+{
+    total = 10 + bonus_points
+    from language; math print("Hello " sentence(person_name) "! Score: " int(total)).nextln
+    return(total)
+}
+
+final_pts = make_greeting.is.int(first_student, 15)
+from language; math print("Final points: " int(final_pts)).nextln
